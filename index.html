@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="Website Icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+
+    <title>Farmácia B&B</title>
+</head>
+
+<header>
+    <div class="interface">
+        <div class="logo">
+            <a id="logo" href="#">
+                <img id="logo" src="seringa.png" alt="Logo Vacina">
+            </a>
+        </div>
+
+        <nav class="menu-desktop">
+            <ul class = "corheader">
+                <li><a href="#s1" class="league-spartan">Informações</a></li>
+                <li><a href="#s2" class="league-spartan">Produtos</a></li>
+                
+            </ul>
+        </nav>
+
+    </div> 
+</header>
+
+<body>
+
+    <section id="s1" class="s1">
+    
+            <div class="coluna dois">
+                <img class="imagem" src="farma.png" alt="Atendente da farmácia" width="120%" height="100%" alt="Farmácia" />
+            </div>
+    
+            <div id="qmsomos" class="coluna dois">
+                <h1 class="league-spartan"> Nossa logística </h1>
+                <br>
+                <p class="questrial-regular justificado ">
+                    Olá, somos Bernardo Renner e Bebeto Chamorro, somos encarregados desta farmácia fundada a partir de nossa amizade: Farmácia B&B! Aqui você poderá encontrar os remédios que precisar para satisfazer suas necessidades médicas. Aproveite a sua estadia e fique de olho nos descontos! 
+                </p>
+            </div>
+        </section>
+        
+    <section id="s2"class="ladoalado">
+        <div>
+        
+            <h1 class="league-spartan">Produtos Disponíveis</h1>
+        
+            <div class="enfileirado"> 
+                <select id="productSelect" class="questrial-regular"></select>
+                <input type="number" id="quantityInput" min="1" placeholder="Quantidade"  class="questrial-regular"/>
+                <button id="addProductButton" class="questrial-regular">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+    <div>
+        
+        <h1 class="league-spartan">Carrinho</h1>
+        <table>
+            <thead>
+                <tr class="questrial-regular large">
+                    <th>Quantidade</th>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>
+        <br>
+        <p id="subtotal" class="questrial-regular">Subtotal: R$ 0.00</p>
+        <p id="total" class="questrial-regular">Total: R$ 0.00</p>
+    </div>
+</section>
+
+<section id="formy">
+
+    <form name="Cadastro" action="processa_usuario.php" method="POST" id="form">
+        <br><br>
+        <div class="form-row">
+            <div class="form-grupo">
+                <h1 class="league-spartan">Nome:</h1>
+                <input type="text" name="nome" class="questrial-regular" size="20" placeholder="Digite seu nome aqui">
+            </div>
+            <div class="form-grupo">
+                <h1 class="league-spartan">Senha:</h1>
+                <input type="password" class="questrial-regular" name="senha" placeholder="Digite sua senha" size="20">
+            </div>
+            <div class="form-grupo">
+                <h1 class="league-spartan">E-mail:</h1>
+                <input type="email" class="questrial-regular" name="email" placeholder="Digite seu e-mail" size="20">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-grupo">
+                <h1 class="league-spartan">Nascimento:</h1>
+                <input type="date" class="questrial-regular" name="data_nascimento">
+            </div>
+            <div class="form-grupo">
+                <h1 class="league-spartan">Sexo:</h1>
+                <select name="sexo" class="questrial-regular">
+                    <option value="">Selecione seu sexo</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-grupo">
+                <h1 class="league-spartan">Telefone:</h1>
+                <input type="tel" class="questrial-regular" name="telefone" placeholder="Digite seu telefone">
+            </div>
+        </div>
+        <br>
+  <div class="form-grupo">
+            <h1 class="league-spartan">Horário da Retirada:</h1>
+            <div>
+                <label class="questrial-regular">
+                    <input type="radio" name="horario_retirada" value="manha"> Manhã
+                </label>
+                <label class="questrial-regular">
+                    <input type="radio" name="horario_retirada" value="tarde"> Tarde
+                </label>
+                <label class="questrial-regular">
+                    <input type="radio" name="horario_retirada" value="noite"> Noite
+                </label>
+            </div>
+        </div>
+        <br>
+        <input type="submit" class="questrial-regular" name="enviar" value="Enviar">
+      
+        
+    </form>
+</section>
+
+</body>
+
+<footer class="questrial-regular">
+    <p>&copy; 2024 B&B Farmacita. Todos os direitos reservados.</p>
+</footer>
+</html>

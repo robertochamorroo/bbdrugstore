@@ -1,0 +1,310 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    background-color:  #6fc5c8; 
+    color: white;
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    padding: 2vw; 
+    opacity: 100%;
+    font-size: 3vw; 
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    transform: scale(1.25);
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex; /* Flexbox para melhor controle */
+}
+
+header nav ul li {
+    padding: 0 1vw; 
+}
+
+#logo {
+    width: 5vw; 
+}
+
+.league-spartan {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.questrial-regular {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.imagem {
+    border-radius: 80px;
+    max-width: 100%; /* Para garantir que a imagem não exceda o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
+}
+
+.s1 {
+    width: 100%;
+    height: auto; /* Ajuste para dispositivos móveis */
+    color: rgb(0, 0, 0);
+    padding-top: 14%;
+    display: flex;
+    flex-wrap: wrap; /* Flexbox para melhor responsividade */
+}
+
+h1 {
+    font-size: 2.5rem; /* Ajuste para dispositivos móveis */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.dois {
+    flex: 1; /* Flexbox para que as colunas se ajustem */
+    min-width: 300px; /* Largura mínima para colunas */
+}
+
+#qmsomos {
+    padding-left: 10%;
+    padding-right: 5%;
+    width: 100%; /* Ajuste para dispositivos móveis */
+    font-size: 1.5rem; /* Ajuste para dispositivos móveis */
+    padding-top: 2.5%;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+.ladoalado {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 100px; 
+}
+
+.enfileirado{
+    display: flex;
+    flex-direction: column; 
+    width: 50%;
+    gap: 10px; 
+}
+
+#productSelect {
+    font-size:large;
+    background-color: #5cb4dd;
+    border-radius: 5%;
+}
+
+#quantityInput {
+    font-size:large;
+    border-radius: 5%;
+}
+
+#addProductButton {
+    font-size:large;
+    border-radius: 5%;
+}
+
+.large {
+    font-size: large;
+}
+
+#total {
+    font-size: x-large;
+}
+
+#subtotal {
+    font-size: x-large;
+}
+
+#s2 {
+    width: 100%;
+    height: auto; 
+    padding-top: 5%;
+    padding-left: 25%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; 
+   
+}
+
+#formy {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+    text-align: center; 
+    background-position: 30% 45%;
+    background-color: black;
+    color:antiquewhite;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    align-items: center;
+    text-align: center;
+    padding-left: 23%;
+    background-image: linear-gradient(to top, transparent 0%, #fff 100%), url(fundo.jpg);
+    padding-top: 15%;
+    padding-bottom: 5%;
+}
+
+form {
+    width: 70%;
+    background-color: #0d0d0e62;
+    border-radius: 10%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+}
+
+.form-grupo {
+    flex: 1; 
+    margin-right: 10px; 
+}
+
+.form-grupo:last-child {
+    margin-right: 0; 
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select {
+    width: 90%;
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
+
+footer {
+    background-color:#476364;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+input[type="radio"] {
+    margin-right: 10px; /* Espaçamento entre o botão e o texto */
+}
+
+label {
+    margin-right: 20px; /* Espaçamento entre as opções */
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Muda a direção do flex para coluna */
+        height: auto; /* Permite que o header ajuste sua altura */
+        padding: 5vw; /* Ajuste para dispositivos móveis */
+    }
+
+    h1 {
+        font-size: 2rem; /* Diminuir o tamanho da fonte em dispositivos móveis */
+    }
+
+    #logo {
+        width: 60px; /* Diminuir o logo em dispositivos móveis */
+    }
+
+    .coluna {
+        width: 100%; /* Colunas ocupam 100% da largura em dispositivos móveis */
+        float: none; /* Remove o float */
+        padding: 0; /* Remove o padding */
+    }
+
+    .s1 {
+        flex-direction: column; /* Colunas em coluna em dispositivos móveis */
+        padding-top: 10%; /* Ajuste de padding */
+    }
+
+    #s2 {
+        width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding-left: 34%;
+    }
+
+    #form {
+        width: 70%;
+    }
+
+    #formy {
+        padding-left: 28%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 20px; /* Ajuste do tamanho da fonte para telas pequenas */
+    }
+
+    header nav ul li {
+        padding: 0 10px; /* Ajuste para telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Diminuir ainda mais o tamanho da fonte */
+    }
+
+    .imagem {
+        border-radius: 10%; /* Para uma aparência mais redonda em dispositivos móveis */
+    }
+
+    #s2 {
+        width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding-left: 25%;
+    }
+
+    #form {
+        padding-left: 0%;
+    }
+
+    
+}
